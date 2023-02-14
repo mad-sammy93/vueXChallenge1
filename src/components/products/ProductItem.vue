@@ -20,15 +20,16 @@
 
 <script>
 export default {
-  inject: ['addProductToCart'],
+  // inject: ['addProductToCart'], //not needed with vuex
+
   props: ['id', 'image', 'title', 'price', 'description'],
   methods: {
     addToCart() {
-      this.addProductToCart({
+      this.$store.dispatch('cart/addToCart',{
         id: this.id,
-        image: this.image,
-        title: this.title,
-        price: this.price,
+        // image: this.image,
+        // title: this.title,
+        // price: this.price,
       });
     },
   },
