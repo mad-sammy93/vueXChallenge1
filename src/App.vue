@@ -10,11 +10,11 @@ export default {
   components: {
     TheHeader
   },
-  data() {
-    return {
-      isLoggedIn: false,
-    };
-  },
+  // data() {//moved to index.js
+  //   return {
+  //     isLoggedIn: false,
+  //   };
+  // },
   // provide() {
   //   return {
   //     isLoggedIn: this.isLoggedIn,
@@ -25,14 +25,14 @@ export default {
   //     logout: this.logout,
   //   };
   // },
-  methods: {
-    login() {
-      this.isLoggedIn = true;
-    },
-    logout() {
-      this.isLoggedIn = false;
-    },
-  },
+  // methods: { //added as mutations instead
+  //   login() {
+  //     this.isLoggedIn = true;
+  //   },
+  //   logout() {
+  //     this.isLoggedIn = false;
+  //   },
+  // },
 };
 </script>
 
